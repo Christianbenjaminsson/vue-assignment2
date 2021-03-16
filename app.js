@@ -15,7 +15,7 @@ const app = Vue.createApp({
         this.counter = this.counter - num;
       }
     },
-    setName(event, lastname) {
+    setName(event) {
       this.name = event.target.value;
     },
     submitForm() {
@@ -26,6 +26,12 @@ const app = Vue.createApp({
     },
     resetInput() {
       this.name = "";
+    },
+    outputFullName() {
+      if (this.name === "") {
+        return "";
+      }
+      return this.name + " " + Andersson;
     },
   },
 });
